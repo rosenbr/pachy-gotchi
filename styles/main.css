@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 100px;
+    
+}
+
+h1 {
+    /* text-align: justify; */
+}
+
+article {
+    background-color: green;
+    border: 5px solid black;
+    margin: 20px;
+    width: 400px;
+    height: 600px;
+    /* padding: 20px; */
+}
+
+nav {
+    border: 5px solid black;
+    background-color: blue;
+    margin: 20px;
+    padding: 20px;
+}
+
+div {
+    border: 5px solid black;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    height: 350px;
+}
+
+aside {
+    border: 5px solid black;
+    margin: 20px;
+    padding: 20px;
+    background-color:yellow;
+}
+
+img {
+    border: 5px solid black;
+    /* margin: 20px; */
+    /* padding: 20px; */
+}
