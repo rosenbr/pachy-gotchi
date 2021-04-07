@@ -1,19 +1,19 @@
-console.log("testing");
-// stub
+// stub √
 
 const pachy = {
 
     age: 0,    // +1/30s max 10 if(time % 30 === 0) age++
     name:"",                        
-    hunger: 10,  // -1/30s  0=dead, 10=happy
-    energy: 10,  // -1/30s  0=dead, 10=happy
-    boredom: 10,  // +1/30s 10=happy, 0=run away (Ice Box, reverse it)
+    hunger: 0,  // -1/30s  10=dead, 0=happy
+    energy: 0,  // -1/30s  10=dead, 0=happy
+    boredom: 0,  // +1/30s 0=happy, 10=run away (Ice Box, reverse it)
     time: 0,
     timer: null,
+};
+
     /* startTimer(){
         this.timer = setInterval(this.increaseTime, 1000);
     } */
-};
 
     /* pet () {        
         $name: $(`#input-name`).val();
@@ -60,20 +60,43 @@ const pachy = {
 
 // start timer
 function startTimer(){
-    pachy.timer = setInterval(increaseTime, 1000);
-        $(".timer").text($('pachy.timer').val());
+    pachy.time = setInterval(increaseTime, 1000);
         console.log("timer working");
 };
-
 function increaseTime(){
     pachy.time++;
 };
-function ageIncrease(){
-    if(pachy.time % 5 === 0){
-        pachy.age++;
-    }
+function ageIncrease(){   //age
+    pachy.age = setInterval(increaseAge, 30000);
+    console.log("age up");
 };
- 
+function increaseAge(){
+    pachy.age++;
+};
+
+function hungerIncrease(){  //hunger
+    pachy.hunger = setInterval(increaseHunger, 2000);
+    console.log("hunger up");
+};
+function increaseHunger(){
+    pachy.hunger++;
+};
+
+function energyIncrease(){  //energy
+    pachy.energy = setInterval(increaseEnergy, 2500);
+    console.log("energy up");
+};
+function increaseEnergy(){  
+    pachy.energy++;
+};
+
+function boredomIncrease(){  //boredom
+    pachy.boredom = setInterval(increaseBoredom, 1500);
+    console.log("boredom up");
+};
+function increaseBoredom(){
+    pachy.boredom++;
+};
 /*
 function ageIncrease(){
     if(pachy.time % 30 === 0){
@@ -92,6 +115,7 @@ function ageIncrease(){
     // start starts age, hunger, energy, boredom timers
         //write timer function √  
             //funciton to increase age w/time linked to timer
+                //display age
             //funciton to increase  w/time linked to timer
             //funciton to increase age w/time linked to timer
             //funciton to increase age w/time linked to timer
@@ -100,7 +124,11 @@ function ageIncrease(){
     // click start, start game with name, age, HEB running 
     
 $(`#start`).on("click", function(){
-    $(".name").text($('#input-name').val());
+    $(".name").text($(`#input-name`).val());
 });
 
 $(`#start`).on("click", startTimer);
+$(`#start`).on("click", ageIncrease);
+$(`#start`).on("click", hungerIncrease);
+$(`#start`).on("click", energyIncrease);
+$(`#start`).on("click", boredomIncrease);
