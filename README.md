@@ -79,3 +79,8 @@ Part 2:
 
 Part 3:
     -added classes and id's to html elements
+
+
+Part 4:
+    -bashed my head into the "Create a Start Button" wall
+    
