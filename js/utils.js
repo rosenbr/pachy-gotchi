@@ -1,60 +1,31 @@
 console.log("testing");
 // stub
 
-// Click Start to start a new game
-    //create Start button √
-    //add click listener to button
-    //grab input value and store in variable
-    //make new element?
-    //change text content of new element
-    //put element in DOM - grab parent and append
-
-// create form to input pet name
-    //create name variable
-    //create initial value of ""
-    //create function to store name entered
-    //get html/css to display name
-        //might need to be broken down more
-
-
-// create new pet
-
-// attach H/E/B to pet
-
-// create timer for HEB
-
-// create buttons for M/N/R
-
-// link MNR to HEB
-
-// create event for death
-
-// create event for game end
-
 const pachy = {
 
-    age: 0,    // +1/60s max 10
-    name:"",
+    age: 0,    // +1/30s max 10 if(time % 30 === 0) age++
+    name:"",                        
     hunger: 10,  // -1/30s  0=dead, 10=happy
     energy: 10,  // -1/30s  0=dead, 10=happy
-    boredom: 0,  // +1/30s 0=happy, 10=run away
+    boredom: 10,  // +1/30s 10=happy, 0=run away (Ice Box, reverse it)
+    time: 0,
+    timer: null,
+    /* startTimer(){
+        this.timer = setInterval(this.increaseTime, 1000);
+    } */
+};
 
-    pet () {        
+    /* pet () {        
         $name: $(`#input-name`).val();
         pachy.name = $name;
-        
-        
         //buttons
         //click listener
         //adjust values
     },
-    // $game  = {
-        
-        
+     */// $game  = {
         // button, onClick -> feeds pet, adjusts Hunger
         // +1.5 hunger, +.025 energy
         // munch(){
-            
         // },
         
         // nap(){
@@ -67,45 +38,69 @@ const pachy = {
             // -1.5 bordeom, -0.25 energy
         // },
     // },
+
+    /* time: 0,
+    timer: null,
+    startTimers(){
+        this.timer = setInterval(this.increaseTime, 1000);
+    }, */
+    
+    
+
+
+/* increaseTime(); {
+    pachy.time++;
+    $(`.age`).text(`Age: ${pachy.time}`);
+    if(time % 30 === 0){
+        pachy.age++;
+    }
+    console.log("time is running");
+}; */
+// pachy.age //age = +1 every 30sec
+
+// start timer
+function startTimer(){
+    pachy.timer = setInterval(increaseTime, 1000);
+        $(".timer").text($('pachy.timer').val());
+        console.log("timer working");
 };
+
+function increaseTime(){
+    pachy.time++;
+};
+function ageIncrease(){
+    if(pachy.time % 5 === 0){
+        pachy.age++;
+    }
+};
+ 
+/*
+function ageIncrease(){
+    if(pachy.time % 30 === 0){
+        pachy.age++;
+    }
+}; */
+
+
+
+// Click Start to start a new game  
+    //store name √
+        //have user input name √
+        //create variabble for name √
+        //input value of prompt in name variable √
     
-    // Click Start to start a new game  
-    // click start √ 
-    //have user input name √, 
-    //store name
-    //create variabble for name
-    //input value of prompt in name variable
+    // start starts age, hunger, energy, boredom timers
+        //write timer function √  
+            //funciton to increase age w/time linked to timer
+            //funciton to increase  w/time linked to timer
+            //funciton to increase age w/time linked to timer
+            //funciton to increase age w/time linked to timer
+        // connect timers to start button √
     
+    // click start, start game with name, age, HEB running 
     
-    //update div 
-    //add HEB values to pet
-    //start timers
-    /*
-$("#start").click(function() {
-    let $name = $(`<span class="name">Name: ${$name}</span>`);
-    $(`.white-space`).append($name)
-    function showName(){
-        let $name = $("#input-name").text($name.val());
-    };
-    console.log("click test");
-});*/
-    
-   
 $(`#start`).on("click", function(){
-    // let $name = $(`<span class="name">Name: ${$name}</span>`);
     $(".name").text($('#input-name').val());
-    console.log("name");
 });
-   /*let bla = $('#inout-name').val();
-   $('#input-name').val(bla);
-   */
-   
-   /* 
-$("button").click(function(){
-  $("input:text").val("Glenn Quagmire");
-});
- */
-// .val() to grab value
-// .text() to write into html
-// $(".pet-name").text($(.val()))   ???
-// $('.name').text($($name.val(input)));
+
+$(`#start`).on("click", startTimer);
