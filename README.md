@@ -80,4 +80,4 @@ Part 2:
 "Commit 1 - Stubbing it up"
 
 Part 3:
-    -
+    -added classes and id's to html elements

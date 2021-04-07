@@ -34,6 +34,7 @@ div {
     margin: 20px;
     padding: 20px;
     height: 350px;
+    /* align-content: ?; */
 }
 
 aside {
@@ -45,6 +46,11 @@ aside {
 
 img {
     border: 5px solid black;
-    /* margin: 20px; */
+    margin: 20px;
     /* padding: 20px; */
+    
+}
+
+.button:hover {
+    cursor: pointer;
 }
