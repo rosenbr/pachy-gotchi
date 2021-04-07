@@ -26,10 +26,12 @@ const game = {
         // button, onClick -> feeds pet, adjusts Hunger
         // +1.5 hunger, +.025 energy
     },  
+    
     nap(){
         // button, onClick -> pet sleeps, adjusts Energy
         // +1.5 energy, +.025 boredom
     },
+    
     rumpus(){
         // button, onClick -> pet plays, adjusts Boredom
         // -1.5 bordeom, -0.25 energy

@@ -1,5 +1,3 @@
-# pachy-gotchi
-Tomagotchi Project GA SEI 322
 -Wirefame
     -draw out how the game will look
     -include pictures
