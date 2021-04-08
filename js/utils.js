@@ -29,7 +29,7 @@ const pachy = {
         } 
     },
     ageIncrease(){   
-        pachy.age = setInterval(pachy.increaseAge, 1000);
+        pachy.ageTimer = setInterval(pachy.increaseAge, 1000);
         // console.log("age up");
     },
     increaseAge(){
@@ -116,31 +116,32 @@ function babyOnBoard(){
 function growingUpSucks(){
     if(pachy.age >= 4 && pachy.age <= 7){
         document.getElementById("teen").style.display = "block";
-        console.log("teen on screen");
+        // console.log("teen on screen");
     } else {
         document.getElementById("teen").style.display = "none";
-        console.log("enjoy getting a job!");
+        // console.log("enjoy getting a job!");
     }
 };
 
 function adultingDinosaur(){
     if(pachy.age >= 8){
         document.getElementById("adult").style.display = "block";
-        console.log("adult on screen");
+        // console.log("adult on screen");
     } else {
         document.getElementById("adult").style.display = "none";
-        console.log("I wish I was a kid again...");
+        // console.log("I wish I was a kid again...");
     }
 };
 
 $('#start').on("click", function(){
     $(".name").text($(`#input-name`).val());
+    pachy.timeDecrease();
+    pachy.ageIncrease();
+    pachy.hungerDecrease();
+    pachy.energyDecrease();
+    pachy.boredomDecrease();
 });
-$('#start').on("click", pachy.timeDecrease);   
-$('#start').on("click", pachy.ageIncrease);   
-$('#start').on("click", pachy.hungerDecrease);
-$('#start').on("click", pachy.energyDecrease);
-$('#start').on("click", pachy.boredomDecrease);
+
 $('#munch').on("click", pachy.feedPachy);
 $('#nap').on("click", pachy.sleepPachy);
 $('#rumpus').on("click", pachy.playPachy);

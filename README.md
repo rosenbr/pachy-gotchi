@@ -101,4 +101,6 @@ Part 5: Game Over
     -Wrote function to place an HTML element when specific values for HEB are met
 
 Part 6: Animations and Pet Growth
+    -Added new img tags to HTML for baby, teen and adult
+    -Wrote functions to cylce through them at specified intervals
     -
