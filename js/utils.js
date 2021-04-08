@@ -4,7 +4,7 @@
 // game over
 // Clean up user stories/README
 // make it pretty
-    //add animations
+    //add animations -use css animations? (keyframes)
 
 
 // stub √
