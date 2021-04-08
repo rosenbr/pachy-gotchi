@@ -29,15 +29,18 @@ const pachy = {
         } 
     },
     ageIncrease(){   
-        pachy.age = setInterval(pachy.increaseAge, 2000);
+        pachy.age = setInterval(pachy.increaseAge, 1000);
         // console.log("age up");
     },
     increaseAge(){
         pachy.age++;
+        babyOnBoard();
+        growingUpSucks();
+        adultingDinosaur();
         $('.age').text(`Age: ${pachy.age}`);
     },
     hungerDecrease(){  
-        pachy.timeDecrease = setInterval(pachy.decreaseHunger, 2000);
+        pachy.timeDecrease = setInterval(pachy.decreaseHunger, 5000);
         // console.log("hunger down");
     },
     decreaseHunger(){
@@ -58,7 +61,7 @@ const pachy = {
         } 
     },
     energyDecrease(){  
-        pachy.timeDecrease = setInterval(pachy.decreaseEnergy, 2000);
+        pachy.timeDecrease = setInterval(pachy.decreaseEnergy, 5000);
         // console.log("energy down");
     },
     decreaseEnergy(){  
@@ -71,7 +74,7 @@ const pachy = {
         console.log("zzzz");
     },
     boredomDecrease(){  
-        pachy.timeDecrease = setInterval(pachy.decreaseBoredom, 1000);
+        pachy.timeDecrease = setInterval(pachy.decreaseBoredom, 5000);
         // console.log("boredom down");
     },
     decreaseBoredom(){
@@ -91,26 +94,44 @@ const pachy = {
     },
     
 }; 
-/* function gameOverMan(){
-    if(pachy.boredom >= 0){
-        $("#game-over").hide();
-        console.log("hidden");
-    } else {
-        $("#game-over").show(1000, swing);
-        console.log("visible");
-    }
-}; */
 
 function gameOverMan(){
-    if(pachy.boredom <= 0){
+    if(pachy.boredom <= 0 || pachy.hunger <= 0 || pachy.energy <= 0){
         document.getElementById("game-over").style.display = "block";
-        console.log("visible");
+        // console.log("visible");
     } else {
         document.getElementById("game-over").style.display = "none"
-        console.log("hidden");
+        // console.log("hidden");
+    }
+};
+function babyOnBoard(){
+    if(pachy.age >= 0 && pachy.age <= 3){
+        document.getElementById("baby").style.display = "block";
+        // console.log("on screen");
+    } else {
+        document.getElementById("baby").style.display = "none";
+        // console.log("bye baby");
+    }
+};
+function growingUpSucks(){
+    if(pachy.age >= 4 && pachy.age <= 7){
+        document.getElementById("teen").style.display = "block";
+        console.log("teen on screen");
+    } else {
+        document.getElementById("teen").style.display = "none";
+        console.log("enjoy getting a job!");
     }
 };
 
+function adultingDinosaur(){
+    if(pachy.age >= 8){
+        document.getElementById("adult").style.display = "block";
+        console.log("adult on screen");
+    } else {
+        document.getElementById("adult").style.display = "none";
+        console.log("I wish I was a kid again...");
+    }
+};
 
 $('#start').on("click", function(){
     $(".name").text($(`#input-name`).val());
@@ -154,11 +175,11 @@ $('#rumpus').on("click", pachy.playPachy);
     //Animate pet pics   ===after EOD===
         //change with age
         //animate woah.css and animate.css (see written wireframe)
-    // game over  ===after lunch===
-        //create pop-up and/or new div when stats reach certain value
+    // game over √ ===after lunch===
+        //create pop-up and/or new div when stats reach certain value √
         //stop timers
-        //create listener for min values
-            //un-hide game-over div  
-                //function to un-hide div
-                //loop to recognize value limit
-                //document.getElementsByClass("game-over").style.display = "none" 
+        //create listener for min values √
+            //un-hide game-over div  √
+                //function to un-hide div √
+                //loop to recognize value limit √
+                

@@ -69,12 +69,12 @@ Inspiration: banging head into wall to get code to work, pachy bangs head into i
 
 //===Log of Progress:===\\
 
-Part 1:
+Part 1: Stubbing it UP!
     -Stubbed up html
     -Stubbed up main.css
     -Stubbed up utils.js
 
-Part 2:
+Part 2: More Stubbing
     -Got main Html elements on page
     -Set up base CSS
     -Styled them to for visual representaion and orientation
@@ -83,19 +83,22 @@ Part 2:
     -Created repo
 
 
-Part 3:
+Part 3: All. The. Stubbing.
     -Added classes and id's to html elements
     -Added buttons to feed, sleep, and play
 
 
-Part 4:
+Part 4: Stat Counters and Buttons
     -Bashed my head into the "Create a Start Button" wall
     -My thick skull prevailed!
     -Wrote out functions to increase age, hunger, energy, and boredom with time
     -Wrote functions to decrease hunger, energy, and boredom when clicked
     -Got stats counters to update with time and when an action is taken to reduce them
 
-Part 5:
+Part 5: Game Over
     -Started working on creating the "game over" screen
     -Set up HTML for game over
+    -Wrote function to place an HTML element when specific values for HEB are met
+
+Part 6: Animations and Pet Growth
     -

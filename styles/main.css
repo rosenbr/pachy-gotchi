@@ -47,6 +47,18 @@ div {
     /* align-content: ?; */
 }
 
+#baby {
+    display: none;
+}
+
+#teen {
+    display: none;
+}
+
+#adult {
+    display: none;
+}
+
 aside {
     border: 5px solid black;
     margin: 20px;
