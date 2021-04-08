@@ -23,6 +23,11 @@ article {
 
 #game-over {
     background-color: black;
+    height: 100px;
+    width: 100px;
+    display: none;
+    position: fixed;
+    z-index: 10;
     /* color: white; */
 }
 

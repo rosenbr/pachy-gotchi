@@ -76,6 +76,7 @@ const pachy = {
     },
     decreaseBoredom(){
         pachy.boredom--;
+        gameOverMan();
         $('.boredom').text(`Boredom: ${pachy.boredom}/10`);
         // console.log("packy bored");
         if(pachy.boredom <= 0) {
@@ -90,7 +91,7 @@ const pachy = {
     },
     
 }; 
-function gameOverMan(){
+/* function gameOverMan(){
     if(pachy.boredom >= 0){
         $("#game-over").hide();
         console.log("hidden");
@@ -98,17 +99,18 @@ function gameOverMan(){
         $("#game-over").show(1000, swing);
         console.log("visible");
     }
-};
+}; */
 
 function gameOverMan(){
     if(pachy.boredom <= 0){
-        document.getElementById("#game-over").style.visibility = "visible";
+        document.getElementById("game-over").style.display = "block";
         console.log("visible");
     } else {
-        document.getElementById("#game-over").style.visibility = "hidden"
+        document.getElementById("game-over").style.display = "none"
         console.log("hidden");
     }
 };
+
 
 $('#start').on("click", function(){
     $(".name").text($(`#input-name`).val());
