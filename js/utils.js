@@ -16,6 +16,7 @@ const pachy = {
 };
 
 
+
 $(`#munch`).on("click", feedPachy);
 function feedPachy(){
     pachy.hunger = pachy.hunger -1.5;
@@ -41,10 +42,11 @@ function playPachy(){
 
 
 function ageIncrease(){   
-    pachy.age = setInterval(increaseAge, 3000);
+    pachy.age = setInterval(increaseAge, 500);
     console.log("age up");
 };
 function increaseAge(){
+    $(`.age`).text(`Age: ${pachy.age}`);
     pachy.age++;
 };
 
@@ -98,6 +100,7 @@ function increaseBoredom(){
             //onClick √
     //HEB counters
         //update w/timer
+        //udate w/feed, sleep, play
     // game over
     
     
