@@ -11,97 +11,124 @@
 const pachy = {
     age: 0,
     name:"",                        
-    hunger: 0,  // -1/30s  10=dead, 0=happy
-    energy: 0,  // -1/30s  10=dead, 0=happy
-    boredom: 0,  // +1/30s 0=happy, 10=run away (Ice Box, reverse it)
-};
-
-
-//   ---age---
-function ageIncrease(){   
-    pachy.age = setInterval(increaseAge, 10000);
-    console.log("age up");
-};
-function increaseAge(){
-    $(`.age`).text(`Age: ${pachy.age}`);
-    pachy.age++;
-};
-
-
-
-//   === hunger/feeding ===
-function hungerIncrease(){  
-    pachy.hunger = setInterval(increaseHunger, 20000);
-    console.log("hunger up");
-};
-function increaseHunger(){
-    $(`.hunger`).text(`Hunger: ${pachy.hunger}/10`);
-    pachy.hunger++;
-};
-function feedPachy(){
-    pachy.hunger = pachy.hunger -1.5;
-    pachy.energy = pachy.energy -0.25;
-    console.log("noms");
-};
-
-
-//   === energy/nap ===
-function energyIncrease(){  
-    pachy.energy = setInterval(increaseEnergy, 25000);
-    console.log("energy up");
-};
-function increaseEnergy(){  
-    $(`.energy`).text(`Energy: ${pachy.energy}/10`);
-    pachy.energy++;
-};
-function sleepPachy(){
-    pachy.energy--;
-    pachy.boredom = pachy.boredom +0.25;
-    console.log("zzzz");
-};
-
-
-
-//   === boredom/play ===
-function boredomIncrease(){  
-    pachy.boredom = setInterval(increaseBoredom, 100);
-    console.log("boredom up");
-};
-function increaseBoredom(){
-    $(`.boredom`).text(`Boredom: ${pachy.boredom}/10`);
-    pachy.boredom++;
-};
-function playPachy(){
-    pachy.boredom--;
-    pachy.energy = pachy.energy +0.25;
-    console.log("weeee!");
-};
+    hunger: 10,  
+    energy: 10,  
+    boredom: 10, 
+    time: 300,
+    timer: null,
+    timeDecrease(){
+        pachy.timer = setInterval(pachy.decreaseTime, 10000);
+        console.log("timer running");
+    },
+    decreaseTime(){
+        pachy.time--;
+        console.log("is working");
+        if(pachy.time <= 0 ) {
+            clearInterval(pachy.timer);
+            console.log("time stopped");
+        } 
+    },
+    ageIncrease(){   
+        pachy.age = setInterval(pachy.increaseAge, 2000);
+        console.log("age up");
+    },
+    increaseAge(){
+        pachy.age++;
+        $('.age').text(`Age: ${pachy.age}`);
+    },
+    hungerDecrease(){  
+        pachy.timeDecrease = setInterval(pachy.decreaseHunger, 2000);
+        console.log("hunger down");
+    },
+    decreaseHunger(){
+        pachy.hunger--;
+        $('.hunger').text(`Hunger: ${pachy.hunger}/10`);
+    },
+    feedPachy(){
+        pachy.hunger = pachy.hunger +1.5;
+        pachy.energy = pachy.energy +0.25;
+        console.log("noms");
+    },
+    hungryPachy(){
+        pachy.time--;
+        // console.log(pachy.time)
+        if(pachy.hunger <= 0 ) {
+            clearInterval(pachy.timeDecrease);
+            console.log("hunger stopped");
+        } 
+    },
 
 
 
+
+    energyDecrease(){  
+        pachy.timeDecrease = setInterval(pachy.decreaseEnergy, 2000);
+        console.log("energy down");
+    },
+    decreaseEnergy(){  
+        pachy.energy--;
+        $('.energy').text(`Energy: ${pachy.energy}/10`);
+    },
+    sleepPachy(){
+        pachy.energy++;
+        pachy.boredom = pachy.boredom -0.25;
+        console.log("zzzz");
+    },
+    boredomDecrease(){  
+        pachy.timeDecrease = setInterval(pachy.decreaseBoredom, 1000);
+        console.log("boredom down");
+    },
+    decreaseBoredom(){
+        pachy.boredom--;
+        $('.boredom').text(`Boredom: ${pachy.boredom}/10`);
+    },
+    playPachy(){
+        pachy.boredom++;
+        pachy.energy = pachy.energy -0.25;
+        console.log("weeee!");
+    },
+    /* stopTimer(){
+        if(pachy.time === 0){
+        clearInterval(pachy.timer);
+            console.log("boredom stopped")
+            }
+    }, */
+}; 
 
 //   === game over ===   needs debugging
-function gameOverMan(){
+/* function gameOverMan(){
     if(pachy.hunger === 10 || pachy.energy === 10 || pachy.boredom === 10){
         $("#game-over").show();  
-        console.log("hiding");
+        console.log("showing");
+    } else {
+        if(pachy.hunger !== 10 || pachy.energy !== 10 || pachy.boredom !== 10){
+            $("#game-over").hide();
+            console.log("hiding")
+        }
     }
-};
+}; */
+
+// clearINterval(packy.hunger/energy/boredom)
+/* stopTimer(){
+    if(pachy.boredom === 0){
+
+        clearInterval(pachy.boredomDecrease);
+        console.log("energy stopped")
+    }
+}; */
 
 
-
-
-$(`#start`).on("click", function(){
+$('#start').on("click", function(){
     $(".name").text($(`#input-name`).val());
 });
-$(`#start`).on("click", ageIncrease);
-$(`#start`).on("click", hungerIncrease);
-$(`#start`).on("click", energyIncrease);
-$(`#start`).on("click", boredomIncrease);
-$(`#munch`).on("click", feedPachy);
-$(`#nap`).on("click", sleepPachy);
-$(`#rumpus`).on("click", playPachy);
-
+$('#start').on("click", pachy.timeDecrease);   
+$('#start').on("click", pachy.ageIncrease);   
+$('#start').on("click", pachy.hungerDecrease);
+$('#start').on("click", pachy.energyDecrease);
+$('#start').on("click", pachy.boredomDecrease);
+$('#munch').on("click", pachy.feedPachy);
+$('#nap').on("click", pachy.sleepPachy);
+$('#rumpus').on("click", pachy.playPachy);
 
 // Click Start to start a new game  √
     //store name √
@@ -124,24 +151,20 @@ $(`#rumpus`).on("click", playPachy);
             //onClick √
         // +boredom √
             //onClick √
-    //HEB counters √
+    //HEB counters   ===before lunch===
         //update w/timer √
         //udate w/feed, sleep, play √
             //boredom/play √
-    //Change pet pic as it ages
+    //Change pet pic as it ages   ===before EOD===
         //function/loop to swap pics
-    //Animate pet pics
+    //Animate pet pics   ===after EOD===
         //change with age
         //animate woah.css and animate.css (see written wireframe)
-    // game over
+    // game over  ===after lunch===
         //create pop-up and/or new div when stats reach certain value
         //stop timers
         //create listener for max values
             //un-hide game-over div  
                 //function to un-hide div
                 //loop to recognize value limit
-                //document.getElementsByClass("game-over").style.display = "none";
-                    //IceBox: seperate div for max boredom
-    
-    
-
+                //document.getElementsByClass("game-over").style.display = "none" 
