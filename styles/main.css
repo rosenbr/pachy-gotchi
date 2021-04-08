@@ -21,7 +21,7 @@ article {
     /* padding: 20px; */
 }
 
-.game-over {
+#game-over {
     background-color: black;
     /* color: white; */
 }

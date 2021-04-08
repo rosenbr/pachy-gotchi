@@ -17,20 +17,20 @@ const pachy = {
     time: 300,
     timer: null,
     timeDecrease(){
-        pachy.timer = setInterval(pachy.decreaseTime, 10000);
-        console.log("timer running");
+        pachy.timer = setInterval(pachy.decreaseTime, 1000);
+        // console.log("timer running");
     },
     decreaseTime(){
         pachy.time--;
-        console.log("is working");
-        if(pachy.time <= 0 ) {
+        // console.log("is working");
+        if(pachy.boredom <= 0) {
             clearInterval(pachy.timer);
             console.log("time stopped");
         } 
     },
     ageIncrease(){   
         pachy.age = setInterval(pachy.increaseAge, 2000);
-        console.log("age up");
+        // console.log("age up");
     },
     increaseAge(){
         pachy.age++;
@@ -38,7 +38,7 @@ const pachy = {
     },
     hungerDecrease(){  
         pachy.timeDecrease = setInterval(pachy.decreaseHunger, 2000);
-        console.log("hunger down");
+        // console.log("hunger down");
     },
     decreaseHunger(){
         pachy.hunger--;
@@ -54,16 +54,12 @@ const pachy = {
         // console.log(pachy.time)
         if(pachy.hunger <= 0 ) {
             clearInterval(pachy.timeDecrease);
-            console.log("hunger stopped");
+            console.log("hunger stopped");  //not working
         } 
     },
-
-
-
-
     energyDecrease(){  
         pachy.timeDecrease = setInterval(pachy.decreaseEnergy, 2000);
-        console.log("energy down");
+        // console.log("energy down");
     },
     decreaseEnergy(){  
         pachy.energy--;
@@ -76,47 +72,43 @@ const pachy = {
     },
     boredomDecrease(){  
         pachy.timeDecrease = setInterval(pachy.decreaseBoredom, 1000);
-        console.log("boredom down");
+        // console.log("boredom down");
     },
     decreaseBoredom(){
         pachy.boredom--;
         $('.boredom').text(`Boredom: ${pachy.boredom}/10`);
+        // console.log("packy bored");
+        if(pachy.boredom <= 0) {
+            clearInterval(pachy.timer);
+            // console.log("boredom stopped");
+        }
     },
     playPachy(){
         pachy.boredom++;
         pachy.energy = pachy.energy -0.25;
         console.log("weeee!");
     },
-    /* stopTimer(){
-        if(pachy.time === 0){
-        clearInterval(pachy.timer);
-            console.log("boredom stopped")
-            }
-    }, */
+    
 }; 
-
-//   === game over ===   needs debugging
-/* function gameOverMan(){
-    if(pachy.hunger === 10 || pachy.energy === 10 || pachy.boredom === 10){
-        $("#game-over").show();  
-        console.log("showing");
+function gameOverMan(){
+    if(pachy.boredom >= 0){
+        $("#game-over").hide();
+        console.log("hidden");
     } else {
-        if(pachy.hunger !== 10 || pachy.energy !== 10 || pachy.boredom !== 10){
-            $("#game-over").hide();
-            console.log("hiding")
-        }
+        $("#game-over").show(1000, swing);
+        console.log("visible");
     }
-}; */
+};
 
-// clearINterval(packy.hunger/energy/boredom)
-/* stopTimer(){
-    if(pachy.boredom === 0){
-
-        clearInterval(pachy.boredomDecrease);
-        console.log("energy stopped")
+function gameOverMan(){
+    if(pachy.boredom <= 0){
+        document.getElementById("#game-over").style.visibility = "visible";
+        console.log("visible");
+    } else {
+        document.getElementById("#game-over").style.visibility = "hidden"
+        console.log("hidden");
     }
-}; */
-
+};
 
 $('#start').on("click", function(){
     $(".name").text($(`#input-name`).val());
@@ -151,7 +143,7 @@ $('#rumpus').on("click", pachy.playPachy);
             //onClick √
         // +boredom √
             //onClick √
-    //HEB counters   ===before lunch===
+    //HEB counters   √
         //update w/timer √
         //udate w/feed, sleep, play √
             //boredom/play √
@@ -163,7 +155,7 @@ $('#rumpus').on("click", pachy.playPachy);
     // game over  ===after lunch===
         //create pop-up and/or new div when stats reach certain value
         //stop timers
-        //create listener for max values
+        //create listener for min values
             //un-hide game-over div  
                 //function to un-hide div
                 //loop to recognize value limit
