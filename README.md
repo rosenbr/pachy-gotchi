@@ -36,18 +36,18 @@ Techincal Requirements:
     -Use semantic markup for HTML and CSS
     -Deploy to a public url using GitHub
 
-Specs:
-    -Create Repo
+Specs AKA MVP:
+    -Create Repo  √
     -Commit after:
-        -Instatiate tomagotchi
-        -Display a character on screen
-        -Display Hunger/Energy/Boredom
-        -Display Age
-        -Add Buttons to feed/sleep/play
-        -Ability to Name pet
+        -Instatiate tomagotchi √
+        -Display a character on screen √
+        -Display Hunger/Energy/Boredom √
+        -Display Age √
+        -Add Buttons to feed/sleep/play √
+        -Ability to Name pet √
         -Style the page
-        -Increase Pet's age every x minutes
-        -Increase H/E/B
+        -Increase Pet's age every x minutes √
+        -Increase H/E/B √
         -Pet should die when H/E/B hit limit
         -Morph pet with age
         -Animate pet while on screen
@@ -64,23 +64,31 @@ Inspiration: banging head into wall to get code to work, pachy bangs head into i
 Log of progress:
 
 Part 1:
-    -stubbed up html
-    -stubbed up main.css
-    -stubbed up utils.js
+    -Stubbed up html
+    -Stubbed up main.css
+    -Stubbed up utils.js
 
 Part 2:
-    -got main Html elements on page
-    -set up base CSS
-    -styled them to see where theyre at
-    -re-positioned them
-    -added eat/sleep/play buttons
-    -created repo
+    -Got main Html elements on page
+    -Set up base CSS
+    -Styled them to see where theyre at
+    -Re-positioned them
+    -Added eat/sleep/play buttons
+    -Created repo
 "Commit 1 - Stubbing it up"
 
 Part 3:
-    -added classes and id's to html elements
+    -Added classes and id's to html elements
+    -Added buttons to feed, sleep, and play
 
 
 Part 4:
-    -bashed my head into the "Create a Start Button" wall
+    -Bashed my head into the "Create a Start Button" wall
+    -My thick skull prevailed!
+    -Wrote out functions to increase age, hunger, energy, and boredom with time
+    -Wrote functions to decrease hunger, energy, and boredom when clicked
+    -Got stats counters to update with time and when an action is taken to reduce them
+
+Part 5:
+    -Started working on creating the "death" screen
     
