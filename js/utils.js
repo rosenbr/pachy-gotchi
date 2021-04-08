@@ -1,8 +1,8 @@
 // TODO add age on Start click
 // add counters √
 // action buttons working √
-// game over
-// Clean up user stories/README √
+// game over √
+// Add wireframe pics
 // make it pretty
     //add animations -use css animations? (keyframes)
 
@@ -171,16 +171,16 @@ $('#rumpus').on("click", pachy.playPachy);
         //update w/timer √
         //udate w/feed, sleep, play √
             //boredom/play √
-    //Change pet pic as it ages   ===before EOD===
-        //function/loop to swap pics
-    //Animate pet pics   ===after EOD===
-        //change with age
-        //animate woah.css and animate.css (see written wireframe)
+    //Change pet pic as it ages √  ===before EOD===
+        //function/loop to swap pics√
     // game over √ ===after lunch===
         //create pop-up and/or new div when stats reach certain value √
         //stop timers
-        //create listener for min values √
+            //create listener for min values √
             //un-hide game-over div  √
-                //function to un-hide div √
-                //loop to recognize value limit √
-                
+            //function to un-hide div √
+            //loop to recognize value limit √
+        //Animate pet pics   ===after EOD===
+            //change with age
+            //animate woah.css and animate.css (see written wireframe)
+        

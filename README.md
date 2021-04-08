@@ -103,4 +103,5 @@ Part 5: Game Over
 Part 6: Animations and Pet Growth
     -Added new img tags to HTML for baby, teen and adult
     -Wrote functions to cylce through them at specified intervals
+    -Prepped CSS for animations
     -
