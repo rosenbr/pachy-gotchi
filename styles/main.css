@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    /* text-align: justify; */
+    text-align: justify;
 }
 
 article {
@@ -19,6 +19,11 @@ article {
     width: 400px;
     height: 600px;
     /* padding: 20px; */
+}
+
+.game-over {
+    background-color: black;
+    /* color: white; */
 }
 
 nav {
@@ -34,10 +39,7 @@ div {
     margin: 20px;
     padding: 20px;
     height: 350px;
-<<<<<<< HEAD
     /* align-content: ?; */
-=======
->>>>>>> 1b0f21c4d186e09f4630e16ca1bec79725ee6d22
 }
 
 aside {

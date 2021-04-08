@@ -5,8 +5,14 @@
 
 
 -User Stories
-    - wording should center around how user interacts with game
-
+    
+    -User Begins game by entering their own custom pachycephalosaurus' name in the input box
+    -When the User clicks "Start", the game begins.
+    -Timers also begin, one for age, hunger, energy, and boredom
+    -The User must try to keep their pachycephalosaurus alive and happy
+    -To do so, the User much click "Munch" to feed their pachycephalosaurus, "Nap" to get some sleep, and "Rumpus" to play with their pachycephalosaurus
+    -If the User keeps their pachycephalosaurus alive until it reaches 10 yrs old, the game ends
+    -Or if the User fails to keep their pachycephalosaurs fed, well rested, or entertained, it will die and the game is over.
 
 Notes:
     -project explanation
@@ -61,7 +67,7 @@ Extras:
 
 Inspiration: banging head into wall to get code to work, pachy bangs head into its problems!
 
-Log of progress:
+//===Log of Progress:===\\
 
 Part 1:
     -Stubbed up html
@@ -71,11 +77,11 @@ Part 1:
 Part 2:
     -Got main Html elements on page
     -Set up base CSS
-    -Styled them to see where theyre at
+    -Styled them to for visual representaion and orientation
     -Re-positioned them
     -Added eat/sleep/play buttons
     -Created repo
-"Commit 1 - Stubbing it up"
+
 
 Part 3:
     -Added classes and id's to html elements
@@ -90,5 +96,6 @@ Part 4:
     -Got stats counters to update with time and when an action is taken to reduce them
 
 Part 5:
-    -Started working on creating the "death" screen
-    
+    -Started working on creating the "game over" screen
+    -Set up HTML for game over
+    -
