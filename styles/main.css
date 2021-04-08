@@ -18,13 +18,14 @@ article {
     margin: 20px;
     width: 400px;
     height: 600px;
+    border-radius: 10px;
     /* padding: 20px; */
 }
 
 #game-over {
     background-color: black;
-    height: 100px;
-    width: 100px;
+    height: 325px;
+    width: 325px;
     display: none;
     position: fixed;
     z-index: 10;
@@ -33,9 +34,11 @@ article {
 
 nav {
     border: 5px solid black;
-    background-color: blue;
+    background-color: rgb(10, 140, 235);
     margin: 20px;
     padding: 20px;
+    width: 350px;
+    border-radius: 10px;
 }
 
 div {
@@ -44,32 +47,40 @@ div {
     margin: 20px;
     padding: 20px;
     height: 350px;
+    width: 350px;
     /* align-content: ?; */
+    border-radius: 10px;
 }
 
 #baby {
     display: none;
+    border-radius: 10px;
 }
 
 #teen {
     display: none;
+    border-radius: 10px;
 }
 
 #adult {
     display: none;
+    border-radius: 10px;
 }
 
 aside {
     border: 5px solid black;
     margin: 20px;
     padding: 20px;
-    background-color:yellow;
+    background-color:chartreuse;
+    border-radius: 10px;
+    width: 350px;
 }
 
 img {
     border: 5px solid black;
     margin: 20px;
     /* padding: 20px; */
+    border-radius: 10px;
     
 }
 

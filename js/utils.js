@@ -3,8 +3,8 @@
 // action buttons working √
 // game over √
 // Add wireframe pics
-// make it pretty
-    //add animations -use css animations? (keyframes)
+// make it pretty in CSS
+// add animations (keyframes)
 
 
 // stub √
@@ -181,6 +181,6 @@ $('#rumpus').on("click", pachy.playPachy);
             //function to un-hide div √
             //loop to recognize value limit √
         //Animate pet pics   ===after EOD===
-            //change with age
+            //change with age √
             //animate woah.css and animate.css (see written wireframe)
         
