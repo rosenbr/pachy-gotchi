@@ -30,7 +30,7 @@ const pachy = {
         } 
     },
     ageIncrease(){   
-        pachy.ageTimer = setInterval(pachy.increaseAge, 1000);
+        pachy.ageTimer = setInterval(pachy.increaseAge, 10000);
         // console.log("age up");
     },
     increaseAge(){
@@ -75,7 +75,7 @@ const pachy = {
         // console.log("zzzz");
     },
     boredomDecrease(){  
-        pachy.timeDecrease = setInterval(pachy.decreaseBoredom, 1000);
+        pachy.timeDecrease = setInterval(pachy.decreaseBoredom, 5000);
         // console.log("boredom down");
     },
     decreaseBoredom(){
