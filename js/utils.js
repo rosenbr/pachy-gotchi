@@ -3,9 +3,9 @@
 // add counters √
 // action buttons working √
 // game over √
-// add animations (keyframes)
+// add animations (keyframes) √
 // Add wireframe pics (Dalton slack msgs)
-// make it pretty in CSS
+// make it pretty in CSS √
 
 
 // stub √
@@ -188,9 +188,5 @@ $('#rumpus').on("click", pachy.playPachy);
             //loop to recognize value limit √
         //Animate pet pics   ===after EOD===
             //change with age √
-            //animate woah.css and animate.css (see written wireframe)
-                // 
-                // 
-                // 
-                // 
-        
+            //animate woah.css and animate.css √
+                

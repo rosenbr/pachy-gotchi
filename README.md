@@ -1,8 +1,7 @@
 -Wirefame
-    -draw out how the game will look
-    -include pictures
-    -or use wireframe tool
-
+![Wireframe1](Wireframe1.jpeg)
+![Wireframe2](Wireframe2.jpeg)
+![Wireframe3](Wireframe3.jpeg)
 
 -User Stories
     
@@ -82,11 +81,9 @@ Part 2: More Stubbing
     -Added eat/sleep/play buttons
     -Created repo
 
-
 Part 3: All. The. Stubbing.
     -Added classes and id's to html elements
     -Added buttons to feed, sleep, and play
-
 
 Part 4: Stat Counters and Buttons
     -Bashed my head into the "Create a Start Button" wall
