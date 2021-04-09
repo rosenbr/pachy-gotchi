@@ -104,4 +104,7 @@ Part 6: Animations and Pet Growth
     -Added new img tags to HTML for baby, teen and adult
     -Wrote functions to cylce through them at specified intervals
     -Prepped CSS for animations
-    -
+    -Animated pet
+
+Part 7: Make it Pretty
+    -Worked on styling the page in CSS

@@ -1,10 +1,11 @@
-// TODO add age on Start click
+// TODO MVP
+// add age on Start click √
 // add counters √
 // action buttons working √
 // game over √
-// Add wireframe pics
-// make it pretty in CSS
 // add animations (keyframes)
+// Add wireframe pics (Dalton slack msgs)
+// make it pretty in CSS
 
 
 // stub √
@@ -25,7 +26,7 @@ const pachy = {
         // console.log("is working");
         if(pachy.boredom <= 0) {
             clearInterval(pachy.timer);
-            console.log("time stopped");
+            // console.log("time stopped");
         } 
     },
     ageIncrease(){   
@@ -50,14 +51,14 @@ const pachy = {
     feedPachy(){
         pachy.hunger = pachy.hunger +1.5;
         pachy.energy = pachy.energy +0.25;
-        console.log("noms");
+        // console.log("noms");
     },
     hungryPachy(){
         pachy.time--;
         // console.log(pachy.time)
         if(pachy.hunger <= 0 ) {
             clearInterval(pachy.timeDecrease);
-            console.log("hunger stopped");  //not working
+            // console.log("hunger stopped");  //not working
         } 
     },
     energyDecrease(){  
@@ -71,10 +72,10 @@ const pachy = {
     sleepPachy(){
         pachy.energy++;
         pachy.boredom = pachy.boredom -0.25;
-        console.log("zzzz");
+        // console.log("zzzz");
     },
     boredomDecrease(){  
-        pachy.timeDecrease = setInterval(pachy.decreaseBoredom, 5000);
+        pachy.timeDecrease = setInterval(pachy.decreaseBoredom, 1000);
         // console.log("boredom down");
     },
     decreaseBoredom(){
@@ -90,11 +91,13 @@ const pachy = {
     playPachy(){
         pachy.boredom++;
         pachy.energy = pachy.energy -0.25;
-        console.log("weeee!");
+        // console.log("weeee!");
     },
     
 }; 
 
+
+//   ===Game Over===
 function gameOverMan(){
     if(pachy.boredom <= 0 || pachy.hunger <= 0 || pachy.energy <= 0){
         document.getElementById("game-over").style.display = "block";
@@ -104,6 +107,8 @@ function gameOverMan(){
         // console.log("hidden");
     }
 };
+
+//   ===Aging===
 function babyOnBoard(){
     if(pachy.age >= 0 && pachy.age <= 3){
         document.getElementById("baby").style.display = "block";
@@ -122,7 +127,6 @@ function growingUpSucks(){
         // console.log("enjoy getting a job!");
     }
 };
-
 function adultingDinosaur(){
     if(pachy.age >= 8){
         document.getElementById("adult").style.display = "block";
@@ -133,6 +137,7 @@ function adultingDinosaur(){
     }
 };
 
+//   ===onClick===
 $('#start').on("click", function(){
     $(".name").text($(`#input-name`).val());
     pachy.timeDecrease();
@@ -141,10 +146,11 @@ $('#start').on("click", function(){
     pachy.energyDecrease();
     pachy.boredomDecrease();
 });
-
 $('#munch').on("click", pachy.feedPachy);
 $('#nap').on("click", pachy.sleepPachy);
 $('#rumpus').on("click", pachy.playPachy);
+
+
 
 // Click Start to start a new game  √
     //store name √
@@ -183,4 +189,8 @@ $('#rumpus').on("click", pachy.playPachy);
         //Animate pet pics   ===after EOD===
             //change with age √
             //animate woah.css and animate.css (see written wireframe)
+                // 
+                // 
+                // 
+                // 
         

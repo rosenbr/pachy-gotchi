@@ -2,14 +2,8 @@
     box-sizing: border-box;
 }
 
-
-body {
-    padding: 100px;
-    
-}
-
 h1 {
-    text-align: justify;
+    text-align: center;
 }
 
 article {
@@ -19,7 +13,7 @@ article {
     width: 400px;
     height: 600px;
     border-radius: 10px;
-    /* padding: 20px; */
+    
 }
 
 #game-over {
@@ -87,3 +81,106 @@ img {
 .button:hover {
     cursor: pointer;
 }
+
+#baby {
+    animation: 1s pulse;
+}
+
+#teen {
+    animation: 1s dealWithItNorm;
+}
+#adult {
+    animation: 1s shaker;
+}
+
+#game-over {
+    animation: 1s fadeIn;
+}
+
+
+  /* Keyframes */
+
+  /* Nap */
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  
+  }
+
+  /* Munch */
+  @keyframes dealWithItNorm {
+  
+    1% {
+
+    }
+
+    30% {
+      transform: translate3d(0,0px,0) scale(1);
+      opacity: 1;
+    }
+
+    40% {
+      transform: rotate(10deg);
+      opacity: 1;
+    }
+
+    50% {
+      transform: rotate(-10deg);
+    }
+
+    60% {
+      transform: rotate(10deg);
+    }
+
+    70% {
+      transform: rotate(-10deg);
+    }
+
+    80% {
+      transform: rotate(0deg);
+    }
+
+
+  }
+
+  /* Rumpus */
+  @keyframes shaker {
+    from {
+      transform: translate3d(0,0,0);
+    }
+  
+    33% {
+      transform: translate3d(-20px,10px,0);
+    }
+  
+    66% {
+      transform: translate3d(20px,0px,0);
+    }
+  
+  
+    to {
+      transform: translate3d(0,0,0);
+    }
+  
+  }
+
+  /* Game Over */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  
+  }

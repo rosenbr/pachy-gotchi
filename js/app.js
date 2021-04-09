@@ -1,4 +1,3 @@
-console.log("hello!");
 // Click Start to start a new game  √
     //store name √
         //have user input name √
