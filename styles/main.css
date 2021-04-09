@@ -4,6 +4,27 @@
 
 h1 {
     text-align: center;
+    
+}
+h3 {
+    text-align: center;
+}
+label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#start {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 article {
@@ -13,7 +34,9 @@ article {
     width: 400px;
     height: 600px;
     border-radius: 10px;
-    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #game-over {
@@ -23,7 +46,10 @@ article {
     display: none;
     position: fixed;
     z-index: 10;
-    /* color: white; */
+    animation: 1s fadeIn;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
 
 nav {
@@ -42,23 +68,34 @@ div {
     padding: 20px;
     height: 350px;
     width: 350px;
-    /* align-content: ?; */
     border-radius: 10px;
 }
+
+.name {
+    padding: 10px;
+}
+
+.age {
+    padding: 10px;
+}
+
 
 #baby {
     display: none;
     border-radius: 10px;
+    animation: 1s pulse;
 }
 
 #teen {
     display: none;
     border-radius: 10px;
+    animation: 1s dealWithItNorm;
 }
 
 #adult {
     display: none;
     border-radius: 10px;
+    animation: 1s shaker;
 }
 
 aside {
@@ -75,6 +112,7 @@ img {
     margin: 20px;
     /* padding: 20px; */
     border-radius: 10px;
+    position: relative;
     
 }
 
@@ -82,21 +120,36 @@ img {
     cursor: pointer;
 }
 
-#baby {
-    animation: 1s pulse;
-}
-
-#teen {
-    animation: 1s dealWithItNorm;
-}
-#adult {
-    animation: 1s shaker;
+.button {
+    
 }
 
 #game-over {
     animation: 1s fadeIn;
+    border: 5px solid black;
+    margin: 20px;
+    /* padding: 20px; */
+    border-radius: 10px;
+    
 }
 
+#munch {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nap {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#rumpus {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
   /* Keyframes */
 
